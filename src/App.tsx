@@ -5,24 +5,24 @@ function App() {
   const [number, setNumber] = useState<number>(0);
 
   useEffect(() => {
-    const date: Date = new Date("2024-05-28");
+    // const date: Date = new Date("2024-05-28");
     const dateNumber: number = 308;
 
-    setNumber((dateNumber + CalculateDate(date)) % 360);
+    setNumber(dateNumber);
   }, []);
 
-  function CalculateDate(startDate: Date): number {
-    const todayDate: Date = new Date();
-    return Math.floor(
-      //wrong
-      todayDate.getTime() - startDate.getTime() / (1000 * 3600 * 24)
-    );
-  }
+  // function CalculateDate(startDate: Date): number {
+  //   const todayDate: Date = new Date();
+  //   return Math.floor(
+  //     //wrong
+  //     todayDate.getTime() - startDate.getTime() / (1000 * 3600 * 24)
+  //   );
+  // }
 
   return (
-    <div className="flex justify-between ">
+    <div className="flex justify-center content-center items-center sm:flex-col">
       <div>
-        <h1 className="text-3xl font-bold">Hussain Lutfi</h1>
+        <h1 className="text-3xl font-bold mr-[30px]">Hussain Lutfi</h1>
         <h1 className="text-2xl">{number}</h1>
       </div>
       <div>
